@@ -1,0 +1,255 @@
+.stuck-section {
+  padding: 8rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Times New Roman', serif;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+.stuck-section__top {
+  text-align: center;
+  margin-bottom: 6rem;
+  position: relative;
+}
+
+.stuck-section__header-text {
+  font-size: 1.4rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #555;
+  letter-spacing: 0.5px;
+}
+
+.stuck-section__days {
+  font-size: 3rem;
+  margin: 3rem 0;
+  font-weight: 700;
+  position: relative;
+}
+
+.stuck-section__days p {
+  margin: 0.8rem 0;
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideIn 0.6s ease forwards;
+}
+
+.stuck-section__days p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stuck-section__days p:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideIn {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.stuck-section__result {
+  font-size: 2rem;
+  margin: 3rem 0;
+  font-weight: 600;
+  color: #6B46C1;
+  letter-spacing: 1px;
+}
+
+.stuck-section__middle {
+  text-align: center;
+  margin-bottom: 6rem;
+  position: relative;
+}
+
+.stuck-section__title {
+  font-size: 5rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, #6B46C1, #805AD5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  transform: scale(0.9);
+  opacity: 0;
+  animation: scaleIn 0.6s ease forwards;
+}
+
+@keyframes scaleIn {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.stuck-section__subtitle {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.stuck-section__bottom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  margin-bottom: 6rem;
+  position: relative;
+}
+
+.stuck-section__change h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #333;
+  position: relative;
+}
+
+.stuck-section__change h2::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100px;
+  height: 4px;
+  background: #6B46C1;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: lineGrow 0.6s ease forwards 0.6s;
+}
+
+@keyframes lineGrow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+.stuck-section__image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards 0.4s;
+}
+
+.stuck-section__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.stuck-section__image:hover img {
+  transform: scale(1.05);
+}
+
+.stuck-section__footer {
+  text-align: center;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #555;
+}
+
+.stuck-section__footer p {
+  margin: 1rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.stuck-section__footer p:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stuck-section__footer p:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .stuck-section {
+    padding: 6rem 2rem;
+  }
+
+  .stuck-section__title {
+    font-size: 4rem;
+  }
+
+  .stuck-section__change h2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stuck-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .stuck-section__header-text {
+    font-size: 1.2rem;
+  }
+
+  .stuck-section__days {
+    font-size: 2.5rem;
+  }
+
+  .stuck-section__title {
+    font-size: 3rem;
+  }
+
+  .stuck-section__bottom {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stuck-section__change {
+    text-align: center;
+  }
+
+  .stuck-section__change h2 {
+    font-size: 2.5rem;
+  }
+
+  .stuck-section__change h2::after {
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+  }
+
+  .stuck-section__footer {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stuck-section__title {
+    font-size: 2.5rem;
+  }
+
+  .stuck-section__days {
+    font-size: 2rem;
+  }
+
+  .stuck-section__result {
+    font-size: 1.5rem;
+  }
+
+  .stuck-section__change h2 {
+    font-size: 2rem;
+  }
+} 

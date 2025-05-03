@@ -1,0 +1,164 @@
+.owner-section {
+  padding: 6rem 0 0 0;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.owner-section__header {
+  padding: 0 4rem;
+  margin-bottom: 4rem;
+}
+
+.owner-section__titles {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.owner-section__titles::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 3px;
+  background-color: #6B46C1;
+}
+
+.owner-section__about {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.owner-section__name {
+  font-size: 2.5rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.owner-section__business-photo {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.business-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.owner-section__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  padding: 0 4rem;
+  align-items: center;
+}
+
+.owner-section__left {
+  height: 600px;
+  overflow: hidden;
+}
+
+.meditation-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.owner-section__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.owner-section__text {
+  padding: 0 2rem;
+}
+
+.owner-section__text p {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+.owner-section__text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .owner-section {
+    padding: 4rem 0 0 0;
+  }
+
+  .owner-section__header {
+    padding: 0 2rem;
+  }
+
+  .owner-section__about {
+    font-size: 3rem;
+  }
+
+  .owner-section__name {
+    font-size: 2rem;
+  }
+
+  .owner-section__content {
+    grid-template-columns: 1fr;
+    padding: 0 2rem;
+    gap: 4rem;
+  }
+
+  .owner-section__left {
+    height: 400px;
+  }
+
+  .owner-section__text {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .owner-section {
+    padding: 3rem 0 0 0;
+  }
+
+  .owner-section__header {
+    padding: 0 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .owner-section__about {
+    font-size: 2.5rem;
+  }
+
+  .owner-section__name {
+    font-size: 1.8rem;
+  }
+
+  .owner-section__business-photo {
+    height: 300px;
+  }
+
+  .owner-section__content {
+    padding: 0 1.5rem;
+    gap: 3rem;
+  }
+
+  .owner-section__left {
+    height: 300px;
+  }
+
+  .owner-section__text {
+    padding: 0;
+  }
+
+  .owner-section__text p {
+    font-size: 1rem;
+  }
+} 

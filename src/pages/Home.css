@@ -1,0 +1,222 @@
+.home {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  width: 100%;
+  opacity: 1 !important;
+  padding: 0;
+  margin: 0;
+}
+
+.home-hero-wrapper {
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  overflow: hidden;
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+
+.home-hero {
+  height: 100vh;
+  min-height: 700px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+  will-change: transform;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.8) 0%, rgba(26, 26, 26, 0.6) 100%);
+  z-index: 1;
+}
+
+.parallax-hero__content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
+  opacity: 1 !important;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.parallax-hero__content h1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+  opacity: 1 !important;
+  transform: translateZ(0);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.parallax-hero__content p {
+  font-size: 2.2rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  opacity: 1 !important;
+  transform: translateZ(0);
+  transition: opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s;
+}
+
+.hero__cta {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  opacity: 1 !important;
+  transform: translateZ(0);
+  transition: all 0.3s ease;
+}
+
+.hero__cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.home-content {
+  padding: 80px 0;
+  background-color: #fff;
+  opacity: 1 !important;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+/* Animation Classes */
+.animate {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+  will-change: transform, opacity;
+}
+
+.animate.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.animate-text.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Section-specific animations */
+.slide-in-left {
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.slide-in-left.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slide-in-right {
+  transform: translateX(50px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.slide-in-right.visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.fade-in-up {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.fade-in-up.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+.scale-in {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.scale-in.visible {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Staggered animations for hero content */
+.parallax-hero__content h1.animate-text {
+  transition-delay: 0.2s;
+}
+
+.parallax-hero__content p.animate-text {
+  transition-delay: 0.4s;
+}
+
+.hero__cta.animate-text {
+  transition-delay: 0.6s;
+}
+
+@media (max-width: 768px) {
+  .home-hero-wrapper,
+  .home-hero {
+    height: 100vh;
+    min-height: 600px;
+  }
+
+  .parallax-hero__content h1 {
+    font-size: 3rem;
+  }
+
+  .parallax-hero__content p {
+    font-size: 1.8rem;
+  }
+
+  .hero__cta {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+  }
+
+  .home-content {
+    padding: 40px 0;
+  }
+} 
